@@ -40,7 +40,7 @@ public class StockAdapter extends RecyclerView.Adapter<StockViewHolder> {
         holder.price.setText(stock.getPrice().toString());
         holder.changePercent.setText("("+String.format("%.2f",stock.getChangePercent())+"%"+")");
 
-        if(Double.parseDouble(holder.wave.getText().toString())<0){//跌的話
+        if(Double.parseDouble(holder.wave.getText().toString())<0){
             holder.stockCode.setTextColor(Color.RED);
             holder.company.setTextColor(Color.RED);
             holder.wave.setTextColor(Color.RED);
@@ -49,7 +49,7 @@ public class StockAdapter extends RecyclerView.Adapter<StockViewHolder> {
             holder.arrow.setTextColor(Color.RED);
             holder.changePercent.setTextColor(Color.RED);
         }else
-            {//漲的話
+            {
                 holder.stockCode.setTextColor(Color.GREEN);
                 holder.company.setTextColor(Color.GREEN);
                 holder.wave.setTextColor(Color.GREEN);
