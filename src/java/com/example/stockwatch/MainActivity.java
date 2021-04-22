@@ -237,7 +237,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 
-    private void doNoAnswer(String symbol) {//當找不到使用者輸入的股票時
+    private void doNoAnswer(String symbol) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         builder.setMessage("No data for specified symbol/name");
