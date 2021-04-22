@@ -78,16 +78,16 @@ public class SymbolNameDownloader implements Runnable {
     }
 
     public static ArrayList<String> findMatches(String str) {//return stock that matches
-        String strToMatch = str.toLowerCase().trim();//把傳進來要match的string先處理
+        String strToMatch = str.toLowerCase().trim();
         HashSet<String> matchSet = new HashSet<>();
 
         for (String sym : symbolNameMap.keySet()) {
-            if (sym.toLowerCase().trim().contains(strToMatch)) {//跟symbol比對
+            if (sym.toLowerCase().trim().contains(strToMatch)) {
                 matchSet.add(sym + " - " + symbolNameMap.get(sym));//key-value appl-apple
             }
             String name = symbolNameMap.get(sym);
             if (name != null &&
-                    name.toLowerCase().trim().contains(strToMatch)) {//跟name比對
+                    name.toLowerCase().trim().contains(strToMatch)) {
                 matchSet.add(sym + " - " + name);
             }
         }
